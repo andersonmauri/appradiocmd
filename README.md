@@ -1,4 +1,4 @@
-## Aplicativo de uma rádio web feito com as seguintes tecnologias:
+## Aplicativo em construção de uma rádio web feito com as seguintes tecnologias:
 
 ### 1 - React-Native
 ### 2 - Styled-components
