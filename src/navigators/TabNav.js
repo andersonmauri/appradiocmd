@@ -6,7 +6,7 @@ import About from '../pages/About';
 import Donation from '../pages/Donation';
 import Program from '../pages/Program';
 import PrayRequest from '../pages/PrayRequest';
-import ButtonPlay from '../components/ButtonPlay';
+import ButtonRadio from '../components/ButtonRadio';
 
 import { Entypo, Feather } from '@expo/vector-icons'
 import Icon from 'react-native-vector-icons/Feather';
@@ -91,7 +91,7 @@ export default () => {
                 name="Inicio"
                 component={Home}
                 options={{
-                    tabBarIcon: () => (<ButtonPlay />),
+                    tabBarIcon: () => (<ButtonRadio />),
                     tabBarLabel: '',
                     activeBackgroundColor: false,
 

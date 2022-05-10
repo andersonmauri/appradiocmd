@@ -3,13 +3,16 @@ import { Image, View } from 'react-native';
 import styled from 'styled-components';
 
 const Logo = styled.View`
-    width:250px;
-    height:250px;
+    width:auto;
+    height:auto;
+    justify-content:center;
+    align-items:center;
+    
 `;
 
 export default () => {
     return (
-        <Logo><Image source={require('../../assets/branca.png')} style={{ width: 200, height: 200 }} />
+        <Logo><Image source={require('../../assets/2.png')} style={{ width: 150, height: 150, marginTop: 90 }} />
 
         </Logo>
     )

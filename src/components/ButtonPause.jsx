@@ -2,22 +2,23 @@ import React from 'react';
 import styled from 'styled-components/native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const ButtonPlay = styled.View`
-width:60px;
-height:60px;
-border-radius:30px;
+const ButtonPause = styled.View`
+width:40px;
+height:40px;
+border-radius:20px;
 background-color:#fff;
 justify-content:center;
 align-items:center;
 margin-bottom:10px;
+margin-left:20px;
 `;
 
 export default () => {
     return (
-        <ButtonPlay>
-            <Icon name="play" color='#FF6700' size={30}
+        <ButtonPause>
+            <Icon name="pause" color='#FF6700' size={30}
             />
-        </ButtonPlay>
+        </ButtonPause>
     )
 
 }
