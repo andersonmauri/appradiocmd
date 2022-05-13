@@ -8,8 +8,7 @@ import ButtonSound from '../components/ButtonSound'
 import Logo from '../components/Logo'
 
 const Container = styled.SafeAreaView`
-  flex:1  
-  background-color:#000;
+  flex:1  ;  
   justify-content:center;
   align-items:center;
 `;
@@ -35,9 +34,10 @@ function Home() {
 
     }
     return (
-        <Container>
-            {Platform.OS == 'ios' && (<StatusBar barStyle="white-content" />)}
-            <ImageBackground source={require('../../assets/background2.jpg')} style={styles.image}>
+        <ImageBackground source={require('../../assets/background2.jpg')} style={styles.image}>
+            <Container>
+                {Platform.OS == 'ios' && (<StatusBar barStyle="white-content" />)}
+
 
 
 
@@ -50,9 +50,10 @@ function Home() {
                     <ButtonPause />
 
                 </View>
-            </ImageBackground >
 
-        </Container>
+
+            </Container>
+        </ImageBackground >
     )
 }
 
