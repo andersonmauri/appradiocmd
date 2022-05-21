@@ -10,7 +10,7 @@ const RadioButton = ({ options = [], horizontal = false, onChangeSelect, selecte
                 options.map((opt, index) => (
                     <View style={styles.optContainer}>
                         <TouchableOpacity onPress={() => onChangeSelect(opt, index)} style={styles.optContainer}>
-                            <View style={styles.outLineCircle}>
+                            <View style={[styles.outLineCircle, { borderColor: selected == index ? '#fff' : '#c5c5c5' }]}>
                                 {selected === index && <View key={index} style={styles.innerCircle} />}
                             </View>
                             <Text style={[styles.text, { color: selected == index ? '#fff' : '#c5c5c5' }]}>{opt}</Text>
