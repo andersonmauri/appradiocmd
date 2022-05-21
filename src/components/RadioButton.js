@@ -5,7 +5,7 @@ const RadioButton = ({ options = [], horizontal = false, onChangeSelect, selecte
 
     return (
 
-        <View>
+        <View style={horizontal ? styles.horizontal : styles.vertical}>
             {
                 options.map((opt, index) => (
                     <View style={styles.optContainer}>
@@ -26,10 +26,18 @@ const RadioButton = ({ options = [], horizontal = false, onChangeSelect, selecte
 }
 
 const styles = StyleSheet.create({
+    horizontal: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    vertical: {
+
+    },
     optContainer: {
         flexDirection: 'row',
         alignItems: 'center',
         color: 'white',
+        padding: 5
 
 
     },
@@ -37,11 +45,11 @@ const styles = StyleSheet.create({
         width: 20,
         height: 20,
         borderRadius: 10,
-        borderColor: '#c3320b',
+        borderColor: '#fff',
         borderWidth: 2,
         justifyContent: 'center',
         alignItems: 'center',
-        margin: 3
+        margin: 5
     },
 
     innerCircle: {
@@ -49,7 +57,7 @@ const styles = StyleSheet.create({
         height: 10,
         borderRadius: 5,
 
-        backgroundColor: '#be6b55'
+        backgroundColor: '#fff'
 
 
     },

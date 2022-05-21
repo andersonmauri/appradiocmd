@@ -5,8 +5,7 @@ import { ImageBackground, SafeAreaView, TextInput, Button, StatusBar, Text, Styl
 
 const Container = styled.SafeAreaView`
   flex:1  
-  background-color:#fff;
-  justify-content:center;
+  
   align-items:center;
 `;
 
@@ -19,7 +18,16 @@ text-align: justify;
 `;
 
 const TextArea = styled.View`
-background-color: rgba(0, 0, 0, 0.5);
+background-color: rgba(0, 0, 0, 0.2);
+margin-top:80px;
+align-items: center
+`;
+const Nome = styled.Text`
+color:#fff;
+padding-top:25px;
+font-size:18px;
+font-weight:bold
+margin-top:45px
 `;
 
 
@@ -27,10 +35,13 @@ background-color: rgba(0, 0, 0, 0.5);
 function About() {
 
     return (
-        <Container>
-            <ImageBackground source={require('../../assets/background.jpg')} style={styles.image}>
+        <ImageBackground source={require('../../assets/background2.jpg')} style={styles.image}>
+
+            <Container>
+                <Nome>Quem Somos?</Nome>
                 <TextArea>
-                    <Image source={require('../../assets/2.png')} style={{ width: 80, height: 80, marginTop: 20, alignItems: 'center' }} />
+
+                    <Image source={require('../../assets/2.png')} style={{ width: 80, height: 80, marginTop: 20 }} />
                     <Texto>Um projeto que o Senhor Jesus colocou em nossos corações, o Ministério Café com Deus
                         surgiu em 2019 apenas com
                         alguns podcasts na plataforma de streaming de músicas Spotify. Hoje, nosso trabalho vem
@@ -46,8 +57,9 @@ function About() {
                         bençãos sobre a sua vida.</Texto>
                 </TextArea>
 
-            </ImageBackground>
-        </Container>
+            </Container>
+        </ImageBackground>
+
     )
 }
 
@@ -55,7 +67,7 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         width: '100%',
-        height: "auto",
+        height: "100%",
         justifyContent: 'center',
         alignItems: 'center',
     }

@@ -6,7 +6,7 @@ const ButtonRadio = styled.View`
 width:70px;
 height:70px;
 border-radius:35px;
-background-color:#d87c3f;
+background-color:#f5f5f5;
 justify-content:center;
 align-items:center;
 margin-bottom:10px;
@@ -15,7 +15,7 @@ margin-bottom:10px;
 export default () => {
     return (
         <ButtonRadio>
-            <Icon name="radio" color='#FFF' size={30}
+            <Icon name="radio" color='#FF6700' size={30}
             />
         </ButtonRadio>
     )

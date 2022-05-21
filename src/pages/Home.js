@@ -6,16 +6,24 @@ import ButtonPlay from '../components/ButtonPlay'
 import ButtonPause from '../components/ButtonPause'
 import ButtonSound from '../components/ButtonSound'
 import Logo from '../components/Logo'
+import Capa from '../components/CapaMusica'
+
 
 const Container = styled.SafeAreaView`
   flex:1  ;  
-  justify-content:center;
   align-items:center;
 `;
 
 const Texto = styled.Text`
 color:#fff;
 padding-bottom:25px
+`;
+
+const Nome = styled.Text`
+color:#fff;
+padding-top:10px;
+font-size:18px;
+font-weight:bold
 `;
 
 
@@ -28,25 +36,18 @@ padding-bottom:25px
 function Home() {
 
 
-    function play() {
-        return (
-            alert("clicou"))
 
-    }
     return (
         <ImageBackground source={require('../../assets/background2.jpg')} style={styles.image}>
             <Container>
                 {Platform.OS == 'ios' && (<StatusBar barStyle="white-content" />)}
-
-
-
-
-
                 <Logo />
+                <Nome>Rádio Ministério Café com Deus</Nome>
+                <Capa />
                 <Texto style={{ marginTop: 20 }}>Ministério Viva Esperança - Tuas Águas</Texto>
                 <View style={styles.buttons}>
                     <ButtonSound />
-                    <ButtonPlay onPress={play()} style={{ marginRight: 50, padding: 50 }} />
+                    <ButtonPlay style={{ marginRight: 50, padding: 50 }} />
                     <ButtonPause />
 
                 </View>

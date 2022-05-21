@@ -12,7 +12,7 @@ const Logo = styled.View`
 
 export default () => {
     return (
-        <Logo><Image source={require('../../assets/2.png')} style={{ width: 150, height: 150, marginTop: 90 }} />
+        <Logo><Image source={require('../../assets/2.png')} style={{ width: 120, height: 120, marginTop: 90 }} />
 
         </Logo>
     )

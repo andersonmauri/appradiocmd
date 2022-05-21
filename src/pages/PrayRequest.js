@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
-import { SafeAreaView, TextInput, Button, StatusBar, Text, Platform, StyleSheet, ImageBackground, Keyboard, Image, TouchableWithoutFeedback } from 'react-native';
+import { SafeAreaView, TextInput, Button, StatusBar, Text, Platform, StyleSheet, ImageBackground, Keyboard, Image, TouchableWithoutFeedback, KeyboardAvoidingView } from 'react-native';
 import RadioButton from '../components/RadioButton'
 import ButtonRequest from '../components/ButtonRequest'
+import { ScrollView } from 'react-native-gesture-handler';
 
 const Container = styled.SafeAreaView`
  width:90%;
  height:600px; 
-background-color: rgba(255, 255, 255, 0.3);
+background-color: rgba(0, 0, 0, 0.2);
 
 border-radius:10px;
  
@@ -28,7 +29,7 @@ const Titulo = styled.Text`
     font-size:19px;
     text-transform:uppercase;
     font-weight: bold;
-    color: #fb4400;
+    color: #f5f5f5;
 `;
 
 
@@ -51,8 +52,10 @@ function PrayRequest() {
 
 
     return (
+
+
         <TouchableWithoutFeedback touchSoundDisabled onPress={() => Keyboard.dismiss()}>
-            <ImageBackground source={require('../../assets/background3.jpg')} style={styles.image}>
+            <ImageBackground source={require('../../assets/background2.jpg')} style={styles.image}>
 
                 <Container >
                     <Image source={require('../../assets/2.png')} style={{ width: 100, height: 100, marginTop: 20, alignItems: 'center', marginBottom: 20 }} />
@@ -71,6 +74,7 @@ function PrayRequest() {
                         onChangeText={n => setName(n)}
                         placeholder="Nome"
                         placeholderTextColor="#ccc"
+                        style={styles.input}
                     />
 
                     <Input setName={setName}
@@ -92,7 +96,11 @@ function PrayRequest() {
 
                 </Container>
             </ImageBackground>
+
+
         </TouchableWithoutFeedback>
+
+
     )
 }
 
@@ -104,6 +112,7 @@ const styles = StyleSheet.create({
         height: "100%",
         justifyContent: 'center',
         alignItems: 'center',
+
     },
     input: {
         color: 'white',

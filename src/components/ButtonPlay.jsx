@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components/native';
+import { Text, TouchableOpacity } from 'react-native';
+
 import Icon from 'react-native-vector-icons/Feather';
 
-const ButtonPlay = styled.View`
+const ButtonPlay = styled.TouchableOpacity`
 width:60px;
 height:60px;
 border-radius:30px;
@@ -14,7 +16,7 @@ margin-bottom:10px;
 
 export default () => {
     return (
-        <ButtonPlay>
+        <ButtonPlay onPress={() => (alert('Deu play na rádio'))}>
             <Icon name="play" color='#FF6700' size={30}
             />
         </ButtonPlay>

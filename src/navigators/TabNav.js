@@ -26,7 +26,7 @@ export default () => {
                 //     '#38727d',
                 activeTintColor: '#FFF',
                 style: {
-                    backgroundColor: '#e6c4a4',
+                    backgroundColor: '#000',
                     borderTopColor: 'transparent',
                     height: 90,
                 },
